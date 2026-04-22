@@ -1,0 +1,61 @@
+---
+title: "Callout-solution Example"
+filters:
+  - callout-solution
+
+teaching:
+  show-solutions: true
+  default-solution-title: "This is a solution title"
+
+---
+
+## Introduction
+
+This filter adds a callout-block that is only visible when the 
+rendered document or project has it enabled through metadata
+
+```
+teaching:
+  show-solutions: true
+  default-solution-title: "This is a solution title"
+```
+
+The block is added like other Quarto callouts
+
+````default
+::: {.callout-solution}
+This block is a solution, only shown when run when `show-solution` is set to `true` in the document or project metadata.
+
+```default
+teaching:
+  show-solutions: true
+```
+
+:::
+````
+
+
+::: {.callout-solution}
+This block is a solution, only shown when run when `show-solution` 
+is set to `true` in the document or project metadata.
+
+```default
+teaching:
+  show-solutions: true
+```
+
+:::
+
+## Example overwriting the example
+
+The `default-solution-title` parameter controls the default title, but it can be overwritten for individual blocks 
+
+````default
+::: {.callout-solution title="My title"}
+This block has had a title overwrite set 
+::: 
+````
+
+::: {.callout-solution title="My title"}
+This block has had a title overwrite set 
+::: 
