@@ -1,0 +1,10 @@
+[workspace]
+authors = ["Mads-Peter <machri@phys.au.dk>"]
+channels = ["conda-forge"]
+name = "quarto-teaching-extensions"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
