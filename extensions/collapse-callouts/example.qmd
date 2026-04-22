@@ -1,0 +1,71 @@
+---
+title: "Collapse-callouts Example"
+filters:
+  - collapse-callouts
+
+teaching:
+  collapse-tips: true
+---
+
+## Basic 
+
+This filter lets one configure whether callouts are collapsed by default at the project level rather than 
+for each callout. 
+
+The extension looks for these metadata entries 
+
+```sh
+teaching:
+  collapse-notes: true
+  collapse-warnings: true
+  collapse-importants: true
+  collapse-tips: true
+  collapse-cautions: true
+```
+
+In which case all callouts will be collapsed by default. This document is rendered with `collapse-tips: true`
+so only tips will collapse by default. 
+
+### Collapsed by default tip
+
+````
+::: {.callout-tip}
+This is collapsed by default because of `collapse-tips: true` in the document metadata.
+::: 
+````
+
+::: {.callout-tip}
+This is collapsed by default because of `collapse-tips: true` in the document metadata.
+::: 
+
+### Uncollapsed by default note
+
+````
+::: {.callout-note}
+This is not collapsed
+::: 
+````
+
+::: {.callout-note}
+This is not collapsed
+::: 
+
+### Uncollapsed by overwrite tip
+
+````
+::: {.callout-tip collapse="false"}
+This is not collapsed because of an overwrite. 
+::: 
+````
+
+::: {.callout-tip collapse="false"}
+This is not collapsed because of an overwrite. 
+::: 
+
+
+
+
+
+
+
+
