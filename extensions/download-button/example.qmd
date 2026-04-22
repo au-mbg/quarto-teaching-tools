@@ -1,0 +1,26 @@
+---
+title: "Download-button Example"
+---
+
+## Basic
+
+This extension adds a shortcode that adds a download button, for example
+
+```{.txt shortcodes="false"}
+{{< download-button path="test-file.txt" text="Download PyMOL Script" filename="pymol.pml" >}}
+```
+
+Becomes this button
+
+{{< download-button path="test-file.txt" text="Download PyMOL Script" filename="pymol.pml" >}}
+
+Whereas 
+
+```{.txt shortcodes="false"}
+{{< download-button path="test-file.txt" >}}
+````
+
+Becomes this button
+
+{{< download-button path="test-file.txt" >}}
+
