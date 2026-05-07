@@ -49,29 +49,31 @@ teaching:
   show-solutions: true
 ```
 
-The filter supports both divs and code blocks:
+The preferred syntax is to mark each block with `teaching: exercise` or `teaching: solution`. The filter supports both divs and code blocks:
 
 ````markdown
 ```python
-#| exercise: true
+#| teaching: exercise
 print("scaffold for students")
 ```
 
 ```python
-#| solution: true
+#| teaching: solution
 print("solution for instructors")
 ```
 
-::: {exercise=true}
+::: {teaching="exercise"}
 Exercise text for students.
 :::
 
-::: {solution=true}
+::: {teaching="solution"}
 Solution text for instructors.
 :::
 ````
 
-Code blocks marked with `exercise: true` are not automatically assigned `eval: false`; add that option explicitly when scaffolded code should not be executed.
+The legacy boolean markers `exercise: true` and `solution: true` are still supported for existing materials. If both legacy and preferred markers are used on the same block, they must agree. Unknown `teaching` values fail the render.
+
+Code blocks marked as exercises are not automatically assigned `eval: false`; add that option explicitly when scaffolded code should not be executed.
 
 This can be installed with
 
