@@ -1,0 +1,11 @@
+---
+title: "Strip-solution Example"
+filters:
+  - strip-solution
+---
+
+## Heading
+
+This filter adds formatting to heading text.
+
+
