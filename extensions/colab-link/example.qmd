@@ -1,0 +1,20 @@
+---
+title: "Colab-link Example"
+format:
+  html: default
+  ipynb: default
+filters:
+  - colab-link
+teaching:
+  colab:
+    repo: au-mbg/fysisk-biokemi
+colab: true
+---
+
+This page opts in to an automatically generated Google Colab link.
+
+With the default configuration, the link points to:
+
+```text
+https://colab.research.google.com/github/au-mbg/fysisk-biokemi/blob/built-notebooks/built_notebooks/student/example.ipynb
+```

@@ -5,6 +5,43 @@ more convenient.
 
 ## Extensions
 
+### colab-link
+
+Adds a Google Colab link to pages that opt in with `colab: true`. The link is
+generated from shared project metadata and inserted into Quarto's rendered
+**Other Formats** block.
+
+Configure the repository and notebook branch in project or profile metadata:
+
+```yaml
+filters:
+  - colab-link
+
+teaching:
+  colab:
+    repo: au-mbg/fysisk-biokemi
+    branch: built-notebooks
+    root: built_notebooks
+    notebook-profile: student
+```
+
+Then mark individual documents:
+
+```yaml
+colab: true
+```
+
+By default, the generated URL points to
+`built_notebooks/student/<document-basename>.ipynb`. The extension only
+generates links; rendering and publishing notebooks remains the responsibility
+of the course build workflow.
+
+This can be installed with
+
+```sh
+quarto install extension au-mbg/quarto-teaching-tools/extensions/colab-link
+```
+
 ### callout-solution
 
 Adds a solution block which is only rendered when `teaching.show-solutions: true` is set in the project 
